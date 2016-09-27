@@ -24,9 +24,20 @@
   </head>
   <body>
     <div id="main">
+    <div id ="main" class="username"/>
+    <div id="roomSelect"/>
       <h1>chatterbox</h1>
+      <div class="submit"id="chatBox">
+      <form action="javascript:app.handleSubmit()"> 
+        Message:<br>
+        <input id="message" type="text" value="add message here!">
+        <br>
+        <input class="submit" id="send" type="submit" value="Submit">
+        </form>
+      </div>  
       <!-- Your HTML goes here! -->
     </div>
     <div id="chats"></div>
   </body>
 </html>
+
