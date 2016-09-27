@@ -29,7 +29,7 @@ app.send = function(message) {
 app.fetch = function () {
 
   $.ajax({
-    url: 'https://api.parse.com/1/classes/messages',
+    //url: 'https://api.parse.com/1/classes/messages',
     contentType: 'application/JSON',
     success: function (data) {
       console.log('appending via for Of loop');
@@ -47,7 +47,7 @@ app.fetch = function () {
 };
 
 app.init = function() {
- $('body').on('submit', app.handleSubmit());
+  $('body').on('submit', app.handleSubmit());
 };
 
 app.clearMessages = function() {
@@ -58,12 +58,12 @@ app.renderMessage = function(username, message, roomname) {
   console.log('renderMessage called');
 
 
-  var userNameEl = '<p class="username" id='+username+' onclick = app.handleUsernameClick(this.id)>' + $('<span></span">').text(username).html() + '</p>';
+  var userNameEl = '<p class="username" id=' + username + ' onclick = app.handleUsernameClick(this.id)>' + $('<span></span">').text(username).html() + '</p>';
   var messageEl = $('<span></span>').text(message);
   var roomNameEl = $('<span onclick="renderRoom()"></span>').text(roomname);
 
   
-  $('#chats').append('<div> Message: ' + messageEl.html() + '<br>User Name: ' + userNameEl + '<br>Room Name: ' + roomNameEl.html() + '</div><br>');
+  $('#chats').append('<div><div> Message: ' + messageEl.html() + '<br>User Name: ' + userNameEl + '<br>Room Name: ' + roomNameEl.html() + '</div><br></div>');
 };
 
 app.renderRoom = function(roomName) {
