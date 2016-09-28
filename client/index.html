@@ -7,6 +7,10 @@
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="env/config.js"></script>
+    <script src="scripts/app.js"></script>
+
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -19,22 +23,22 @@
       }
     </script>
     <!-- your scripts -->
-    <script src="env/config.js"></script>
-    <script src="scripts/app.js"></script>
   </head>
   <body>
     <div id="main">
     <div id ="main" class="username"/>
-    <div id="roomSelect"/>
+    <div id="roomList"/>
       <h1>chatterbox</h1>
+      <select id="roomSelect" onchange="app.selectRooms()"></select>
       <div class="submit"id="chatBox">
       <form action="javascript:app.handleSubmit()"> 
         Message:<br>
-        <input id="message" type="text" value="add message here!">
+        <input id="message" style="border: 1px solid black;" type="text" value="add message here!">
         <br>
         <input class="submit" id="send" type="submit" value="Submit">
         </form>
       </div>  
+      <div style="border: 1px solid black;" class="friendsList">Friends :</div>
       <!-- Your HTML goes here! -->
     </div>
     <div id="chats"></div>
