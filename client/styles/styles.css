@@ -3,6 +3,7 @@ body {
     text-align: center;
     padding: 0 25px;
     font-family: arial, sans-serif;
+    color: lightgrey;
 }
 
 #main, #chats {
@@ -10,10 +11,11 @@ body {
     color: #0081AF;
     margin: auto;
     text-align: left;
-    background: white;
+    background: lightgrey;
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+
 }
 
 #main h1 {
@@ -22,6 +24,7 @@ body {
     font-size: 35px;
     margin-bottom: 5px;
     padding: 5px;
+    position: relative;
 }
 
 #main h1 span {
@@ -30,6 +33,7 @@ body {
 
 #main ul {
     padding-left: 20px;
+    position: relative;
 }
 
 #main .error {
@@ -44,7 +48,7 @@ body {
 
 #main .success code {
     font-size: 12px;
-    color: green;
+    color: lightgrey;
     line-height: 13px;
 }
 
@@ -53,6 +57,9 @@ form {
     padding: 20px;
     padding-left: 0;
     margin-bottom: 20px;
+    color: #0081AF;
+    position: relative;
+
 }
 
 form input[type=text] {
@@ -61,20 +68,31 @@ form input[type=text] {
     width: 80%;
     font-size: 12px;
     padding: 5px;
+    color: #0081AF;
+
 }
 
 .chat {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: #eee;
+    color: lightblue;
+    float: left;
 }
 
 .chat .username {
     font-weight: 800;
+    float: left;
+
 }
 
+.chats .username {
+    float: left;
+    color: lightgreen;
+}
 .chat:hover {
     background-color: #ddd;
+    float: left;
+
 }
 
 .spinner {
@@ -92,6 +110,3 @@ form input[type=text] {
     background-color: #0090da;
 }
 
-#roomSelect{
-
-}

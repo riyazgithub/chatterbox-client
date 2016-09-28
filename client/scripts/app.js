@@ -112,6 +112,13 @@ app.handleSubmit = function() {
   $('#message').val('');
 };
 
+app.handleRoomSubmit = function() {
+  var newRoomNameData = $('#newRoom').val();
+  app.renderRoom(newRoomNameData);
+  console.log('blast off', newRoomNameData);
+};
+
+
 app.selectRooms = function() {
   var room = $('#roomSelect').val();
   var selectedRooms = _.filter(app.storage, function (msg) {
@@ -124,6 +131,6 @@ app.selectRooms = function() {
     app.renderMessage(object.username, object.text, object.roomname);
   }
 };
-
+//create app.handleRoomSubmit
 //setInterval(function() {app.fetch();}, 5000);
 app.fetch()

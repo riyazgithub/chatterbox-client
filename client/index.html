@@ -25,23 +25,23 @@
     <!-- your scripts -->
   </head>
   <body>
-    <div id="main">
     <div id ="main" class="username"/>
-    <div id="roomList"/>
       <h1>chatterbox</h1>
+      <h5>select chat room here</h5>
       <select id="roomSelect" onchange="app.selectRooms()"></select>
-      <div class="submit"id="chatBox">
+      <form action="javascript:app.handleRoomSubmit()"> 
+        <input id="newRoom" style="border: 1px solid black;" type="text" value="add new room here!">
+        <input class="submit" id="send" type="submit" value="Submit">
+        </form>
+      <div class="submit"id="chats">
       <form action="javascript:app.handleSubmit()"> 
         Message:<br>
         <input id="message" style="border: 1px solid black;" type="text" value="add message here!">
         <br>
         <input class="submit" id="send" type="submit" value="Submit">
         </form>
-      </div>  
       <div style="border: 1px solid black;" class="friendsList">Friends :</div>
       <!-- Your HTML goes here! -->
-    </div>
-    <div id="chats"></div>
   </body>
 </html>
 
